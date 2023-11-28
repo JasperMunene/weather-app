@@ -1,0 +1,352 @@
+body{
+    margin: 0;
+    background-color: #E8E9F3;
+}
+
+.cont {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 15px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        width: 800px;
+        height: 530px;
+        overflow: hidden;
+        background-image: url("../images/background.png");
+        background-size: cover;
+        background-position: center;
+        background-image: url(../images/Blue\ Green\ Watercolor\ Linktree\ Background.png);
+        display: grid;
+        
+}
+
+.search-bar {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 480px;
+    height: 40px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+
+  .city-input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  .search-button {
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+
+  #searchInput {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    padding-right: 30px;
+  }
+  
+  #searchInput::placeholder {
+    font-style: italic;
+  }
+  
+  #searchInput:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px #d6eaf8;
+  }
+  
+  .current-weather {
+    position: absolute;
+    top: 90px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 480px;
+    height: 190px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    color: #000000;
+  }
+  
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 0;
+  }
+  
+  .location {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 5px;
+    
+
+  }
+  
+  .time {
+    text-align: right;
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 5px;
+  }
+  
+  .date {
+    text-align: left;
+    font-size: 10px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #6f6b6b;
+    font-style: italic;
+  }
+  
+  .temperature {
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 7px;
+  }
+  .temp-unit {
+    font-size: 10px;
+    color: #ffb74d;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .temp-unit a {
+    color: #6f6b6b;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .weather-icon {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .weather-icon img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .weather-type {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .today-forecasts {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: 480px;
+    height: 205px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    color: #000000;
+  }
+  
+  .forecasts-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .forecast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .forecast-time {
+    font-weight: 500;
+  }
+  
+  .forecast-icon {
+    max-width: 50px;
+    margin-top: 5px;
+  }
+  
+  .forecast-temp {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  .forecast:not(:last-child):before {
+    content: "";
+    position: absolute;
+    top: 32%;
+    border-right: 1.5px solid #ccc;
+    transform: translateY(4px) translateX(35px);
+    height: 50%;
+  }
+  
+  .week-forecasts {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 240px;
+    height: 440px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    color: #000000;
+    
+}
+
+  
+  .week-forecasts h6 {
+    margin: 0 auto;
+    padding-left: 20px;
+  }
+  
+  .activity {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    padding: 10px 0;
+    
+  }
+
+ .activity-carousel{
+  padding-left: 30px;
+ }
+  
+  .activity img {
+  
+    height: 100px;
+    margin: 0 30px;
+  }
+  
+  .prev,
+  .next {
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #ffb74d;
+    cursor: pointer;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .activity p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    font-style: italic;
+    
+  }
+  
+  .activity .pink {
+    color: #e5aebf;
+  }
+  
+  .activity .blue {
+    color: #71a2ab;
+  }
+  
+  .activity .green {
+    color: #63867b;
+  }
+  
+  .activity .yellow {
+    color: #d9af6b;
+  }
+  
+  .day {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin: 8px;
+  }
+  
+  .day:last-child {
+    border-bottom: none;
+  }
+  
+  .day-name {
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: capitalize;
+  }
+  
+  .day img {
+    height: 35px;
+  }
+  
+  .day-temp {
+    font-weight: 300;
+    font-size: 10px;
+  }
+  
+  .day-weather {
+    font-weight: 700;
+    font-size: 7px;
+    font-style: italic;
+  }
+  
+  .credit {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #6f6b6b;
+  }
+  
+  .credit a {
+    color: #636363;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .credit a:hover {
+    color: #000;
+  }
+  
